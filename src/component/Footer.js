@@ -7,7 +7,7 @@ export default function Footer() {
     const rentcars = ['Ford', 'BMW', 'Audi'];
     const cars = [
         { name: "roshan", email: "roshan@gmail.com" },
-        { name: "RK", email: "RK@gmail.com" }
+        { name: "RK", email: "RK@gmail.com " }
     ]
 
     const mycar = cars.map((data) =>
