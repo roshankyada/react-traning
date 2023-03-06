@@ -1,0 +1,14 @@
+body {
+    background-color: #282c34;
+    color: white;
+    padding: 40px;
+    font-family: Sans-Serif;
+    text-align: center;
+  }
+
+.bigblue {
+    color: rgb(185, 172, 51);
+    padding: 40px;
+    font-family: Sans-Serif;
+    text-align: center;
+  }
