@@ -1,39 +1,36 @@
 
 import { useState } from 'react'
 
+
 export default function Footer() {
 
-    const [loggedIn, setLoggedIn] = useState(true)
-    const rentcars = ['Ford', 'BMW', 'Audi'];
-    const cars = [
-        { name: "roshan", email: "roshan@gmail.com" },
-        { name: "RK", email: "RK@gmail.com " }
-    ]
+    const initState = ['Ford', 'BMW', 'Audi'];
 
-    const mycar = cars.map((data) =>
-        <>
-            {data.name},
-            {data.email}
-        </>
+    const [persons, setpersons] = useState(initState)
 
-    )
+    const handelclick = () => {
+        // persons.push('Brain')
+        // persons.push('quber')
+        // setpersons(persons)
 
+        const newpersons = [...persons]
+        persons.push('Brain')
+        persons.push('quber')
+        setpersons(newpersons)
+    }
+
+    console.log('hello')
     return (
 
         <div>
-            {loggedIn == 1 ? <h1>welcome to user 1</h1>
-                : loggedIn == 2 ? <h1>Welcome to user 2</h1>
-                    : <h1>Welcome to user 3</h1>}
-            {loggedIn && <h2>hello</h2>}
-            {/* {cars.map((data) =>
-                <>
-                    {data.name},
-                    {data.email}
-                </>
 
-            )} */}
-            <h4>{rentcars[1]}</h4>
-            {mycar}
+            <button onClick={handelclick}>Click</button>
+            {
+                persons.map(person => (
+                    <div key={person}>{person}</div>
+                ))
+
+            }
         </div>
     )
 
