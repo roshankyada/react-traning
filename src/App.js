@@ -13,7 +13,7 @@ function App() {
         <Header title="todos list" serchBar={true} />
 
         <Footer />
-        {/* <Work /> */}
+        <Work />
       </div>
     </>
   );
