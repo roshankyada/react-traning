@@ -1,14 +1,30 @@
 body {
-    background-color: #282c34;
-    color: white;
-    padding: 40px;
-    font-family: Sans-Serif;
-    text-align: center;
-  }
+  /* background-color: #282c34; */
+  /* color: hsl(0, 66%, 45%); */
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
 
 .bigblue {
-    color: rgb(185, 172, 51);
-    padding: 40px;
-    font-family: Sans-Serif;
-    text-align: center;
-  }
+  color: rgb(185, 172, 51);
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
