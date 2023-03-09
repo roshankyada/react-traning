@@ -39,23 +39,28 @@
 // }
 
 // export default Radium(Work);
+
 import Radium from 'radium';
 import React from 'react';
 
 function Work() {
 
 
+
     const style = {
-        backgroundColor: 'teal',
-        border: '1px solid blue',
-        ':hover': {
-            backgroundColor: 'red'
-        }
-    }
+        '@media (min-width: 500px)': {
+            width: '300px',
+            backgroundColor: 'teal',
+            border: '1px solid blue',
+            ':hover': {
+                backgroundColor: 'red'
+            }
+        },
+    };
     return (
         <div>
             <h3>Now you can see hover is working in inline styling</h3>
-            <button style={style}>example of radium</button>
+            <button className="Work" style={style}>example of radium</button>
         </div>
     );
 }
