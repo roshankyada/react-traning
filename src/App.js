@@ -3,8 +3,9 @@ import Header from "./component/Header";
 import Work from "./component/Work";
 import Footer from "./component/Footer";
 import Radium, { StyleRoot } from 'radium';
-function App() {
+import 'bootstrap/dist/css/bootstrap.min.css'
 
+function App() {
 
   return (
 
@@ -12,8 +13,9 @@ function App() {
       <div className="App" >
         <Header title="todos list" serchBar={true} />
 
-        <Footer />
+        <Footer name="sachin" />
         <Work />
+
       </div>
     </StyleRoot>
   );
