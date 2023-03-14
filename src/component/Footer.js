@@ -1,81 +1,30 @@
-import React, { Component } from 'react'
-import Child from "./Child";
+import React, { useEffect, useState } from 'react'
 
-export default class Footer extends Component {
-    constructor(props) {
-        super(props)
+const Footer = (props) => {
 
-        this.state = {
-            data: "roshan kyada",
-            name: "tandulker",
-            show: true
-        }
-    }
+    const [count, setCount] = useState(0);
+    const [calculation, setCalculation] = useState(0);
 
-    static getDerivedStateFromProps(props, state) {
-        if (props.name !== state.name) {
-            return {
-                name: props.name
-            }
-        }
-        return null
-    }
+    useEffect(() => {
+        console.log('Footer.Js useEffect', count);
 
-    changeName = () => {
-        this.setState({ name: "roshan" })
-        console.log(this.state.name)
-    }
+    }, [count])
 
-    // shouldComponentUpdate() {
-    // return false;
+    useEffect(() => {
+        alert('hello', props.rollNo)
+        console.log('useEffect props.rollno:', props.rollNo);
+    }, [props.rollNo])
 
-    getData() {
-        setTimeout(() => {
-            console.log('Our data is fetched');
-            this.setState({
-                data: 'Hello WallStreet',
-            })
-        }, [2000])
 
-    }
+    return (
+        <div>
+            <h1>count:{count}</h1>
+            <h1>calculation:{calculation}</h1>
+            <button onClick={() => setCount(count + 1)}>count+1</button>
+            <button onClick={() => setCalculation(calculation + 1)}>calculation+1</button>
+            <h2>rollNo:{props.rollNo}</h2>
 
-    componentDidMount() {
-        console.log('componentDidMount is here')
-        this.getData();
-    }
-
-    componentWillMount() {
-        console.log('First this called');
-
-    }
-
-    // getSnapshotBeforeUpdate(prevProps, prevState) {
-    //     document.getElementById("div1").innerHTML =
-    //         "Before the update, the favorite was " + prevState.name;
-    // }
-
-    // componentDidUpdate() {
-    //     document.getElementById("div1").innerHTML =
-    //         "The updated favorite is " + this.state.favoritecolor;
-    //}
-
-    childRemove = () => {
-        this.setState({ show: false });
-    }
-    render() {
-        let myheader;
-        if (this.state.show) {
-            myheader = <Child />;
-        };
-        return (
-            <div>
-                {myheader}
-                <button onClick={this.childRemove}>remove child</button>
-                <p>{this.state.data}</p>
-                <p>this state is {this.state.name}</p>
-                <button onClick={this.changeName}>color change</button>
-                <p id="div1"></p>
-            </div>
-        )
-    }
+        </div>
+    )
 }
+export default Footer;
