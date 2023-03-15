@@ -4,17 +4,25 @@ const Footer = (props) => {
 
     const [count, setCount] = useState(0);
     const [calculation, setCalculation] = useState(0);
+    const [state, setState] = useState(null);
+
+
 
     useEffect(() => {
-        console.log('Footer.Js useEffect', count);
+        console.log('[Footer.js] useEffect');
 
-    }, [count])
+        return () => {
+            console.log('[Footer.js] cleanup work in useEffect'); // cleanup work here
+        };
+    }, [])
 
-    useEffect(() => {
-        alert('hello', props.rollNo)
-        console.log('useEffect props.rollno:', props.rollNo);
-    }, [props.rollNo])
 
+    // useEffect(() => {
+    //     console.log('I am the effect');
+    //     return () => {
+    //         console.log('I run after re-render, but before the next useEffect');
+    //     };
+    // });
 
     return (
         <div>
@@ -23,7 +31,11 @@ const Footer = (props) => {
             <button onClick={() => setCount(count + 1)}>count+1</button>
             <button onClick={() => setCalculation(calculation + 1)}>calculation+1</button>
             <h2>rollNo:{props.rollNo}</h2>
-
+            <button
+                onClick={() => {
+                    setState('Some v. important state.');
+                }}> Click me</button>
+            <p>state: {state}</p>
         </div>
     )
 }
