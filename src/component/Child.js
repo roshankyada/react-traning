@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import HOC from "./HOC";
 
-export default class Child extends Component {
+class Child extends Component {
     constructor(props) {
         super(props)
 
@@ -22,8 +23,10 @@ export default class Child extends Component {
             <div>
                 <h3>should component update {this.state.count}</h3>
                 <button onClick={() => { this.setState({ count: this.state.count + 1 }) }}>^update^</button>
+                <h1>{this.props.hocsub}{this.props.name}</h1>
             </div>
 
         )
     }
 }
+export default HOC(Child)

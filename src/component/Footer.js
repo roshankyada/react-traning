@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Child from "./Child";
+import HOC from "./HOC";
 
 const Footer = (props) => {
 
@@ -22,7 +22,7 @@ const Footer = (props) => {
     return (
 
         <div>
-            <Child />
+
 
 
 
@@ -33,8 +33,8 @@ const Footer = (props) => {
                     setState('Some v. important state.');
                 }}> Click me</button>
             <p>state: {state}</p>
-
+            <h1>{props.hocsub}</h1>
         </div>
     )
 }
-export default Footer;
+export default HOC(Footer);
