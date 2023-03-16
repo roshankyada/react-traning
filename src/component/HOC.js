@@ -5,7 +5,9 @@ const HOC = (WrappedComponent, num) => {
 
         const [count, setCount] = useState(0)
         function increment() {
-            setCount(count + num)
+            setTimeout(() => {
+                setCount(prevcount => prevcount + num)
+            }, [2000])
         }
         return (
             <div>
