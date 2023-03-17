@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 
 
-export default function Header(props) {
+function Header(props) {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +24,7 @@ export default function Header(props) {
                         {props.serchBar ? <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form> : "NO SERCHBAR"}
+                        </form> : "NOpropsTypes SERCHBAR"}
                     </div>
                 </div>
             </nav>
@@ -32,8 +33,16 @@ export default function Header(props) {
     )
 }
 
-Header.defaultProps = {
-    title: "defaulTitle",
-    serchBar: true
+
+
+export default Header;
+
+
+
+Header.propTypes = {
+    title: PropTypes.string
 }
 
+Header.defaultProps = {
+    title: "title is not avalible"
+};

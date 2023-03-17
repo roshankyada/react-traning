@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "prop-types": "^15.8.1",
     "react-devtools": "^4.27.2"
   }
 }

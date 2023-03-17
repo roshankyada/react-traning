@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HOC from "./HOC";
+
 
 const Footer = (props) => {
 
@@ -37,4 +37,4 @@ const Footer = (props) => {
         </div>
     )
 }
-export default HOC(Footer);
+export default Footer

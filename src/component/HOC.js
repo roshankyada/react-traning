@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+
 const HOC = (WrappedComponent, num) => {
     function HOC(props) {
 
@@ -7,7 +8,7 @@ const HOC = (WrappedComponent, num) => {
         function increment() {
             setTimeout(() => {
                 setCount(prevcount => prevcount + num)
-            }, [2000])
+            }, [1000])
         }
         return (
             <div>
@@ -18,3 +19,4 @@ const HOC = (WrappedComponent, num) => {
     return HOC
 }
 export default HOC;
+
