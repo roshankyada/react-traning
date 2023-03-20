@@ -6,19 +6,26 @@ import React from 'react'
 import Child from "./component/Child";
 import A from "./component/A";
 import B from "./component/B";
-
+import DemoState from "./component/DemoState"
+import Work from "./component/Work";
 
 function App() {
 
 
+
+
   return (
     <>
-      <Header title="Header" serchBar={true} />
-      <Child />
-      <Footer />
-      <A />
-      <B />
+      <DemoState>
 
+
+        <Header title="Header" serchBar={true} />
+        <Child />
+        <Footer />
+        <A />
+        <B />
+        <Work />
+      </DemoState>
     </>
   );
 }

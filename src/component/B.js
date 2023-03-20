@@ -1,12 +1,12 @@
 import React from 'react'
 import HOC from './HOC';
-import './my-style.css';
+import './mainComponent.css';
 
 function B(props) {
     const { count, increment, name } = props
 
     return (
-        <div>
+        <div className='B'>
             <button className="btn btn-warning" onMouseOver={increment}>{name}.click {count}</button>
         </div>
     )

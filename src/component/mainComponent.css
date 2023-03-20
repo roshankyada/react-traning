@@ -1,0 +1,69 @@
+body {
+  /* background-color: #282c34; */
+  /* color: hsl(0, 66%, 45%); */
+  padding: 40px;
+  font-family: Sans-Serif;
+
+}
+
+.bigblue {
+  color: rgb(185, 172, 51);
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+/* .App {
+  text-align: center;
+} */
+
+.red {
+  color: rgb(20, 24, 236);
+}
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h3:hover {
+  color: rgb(8, 187, 187);
+}
+
+.A {
+  background-color: aquamarine;
+  margin: 20px;
+  border-style: inset;
+  padding: 20px;
+}
+
+.B {
+  background-color: rgb(41, 50, 170);
+  margin: 20px;
+  border-style: inset;
+  padding: 20px;
+}
+
+.Child {
+  background-color: rgb(137, 66, 170);
+  margin: 20px;
+  border-style: inset;
+  padding: 20px;
+}
+
+.Footer {
+  background-color: rgb(144, 189, 72);
+  margin: 20px;
+  border-style: inset;
+  padding: 20px;
+}
+
+.WOrk {
+  background-color: rgb(161, 61, 66);
+  margin: 20px;
+  border-style: inset;
+  padding: 20px;
+}

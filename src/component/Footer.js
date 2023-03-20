@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 
+
 const Footer = () => {
     let inputref = useRef(null)
 
@@ -10,10 +11,13 @@ const Footer = () => {
         inputref.current.style.color = "red"
         inputref.current.style.display = "none"
     }
+
+
     return (
-        <div>
+        <div className='Footer'>
             <input type="text" ref={inputref} />
             <button onClick={handelInput}>ref</button>
+
         </div>
     )
 }

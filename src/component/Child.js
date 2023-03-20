@@ -26,7 +26,7 @@ class Child extends Component {
     // }
     render() {
         return (
-            <div>
+            <div className='Child'>
                 {/* <h3>should component update {this.state.count}</h3>
                 <button onClick={() => { this.setState({ count: this.state.count + 1 }) }}>^update^</button>
                 <h1>{this.props.hocsub}{this.props.name}</h1> */}
