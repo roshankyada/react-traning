@@ -9,7 +9,7 @@ const Footer = () => {
         inputref.current.value = "100"
         inputref.current.focus()
         inputref.current.style.color = "red"
-        inputref.current.style.display = "none"
+        // inputref.current.style.display = "none"
     }
 
 
