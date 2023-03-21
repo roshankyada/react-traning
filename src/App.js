@@ -8,7 +8,8 @@ import A from "./component/A";
 import B from "./component/B";
 import DemoState from "./component/DemoState"
 import Work from "./component/Work";
-import ComponentAxios from "./Component1/ComponentAxios";
+import Cmp1 from './Component1/Cmp1';
+import Cmp2 from './Component1/Cmp2';
 function App() {
 
 
@@ -26,7 +27,8 @@ function App() {
         <B />
         <Work />
       </DemoState>
-      <ComponentAxios />
+      <Cmp1 />
+      <Cmp2 />
     </>
   );
 }
