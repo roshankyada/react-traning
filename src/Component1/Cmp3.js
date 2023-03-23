@@ -51,6 +51,7 @@ class Cmp3 extends Component {
                     <option value="Manu">Manu</option>
                 </select>
                 <button onClick={this.postDataHandler}>Add Post</button>
+
             </div>
         );
     }

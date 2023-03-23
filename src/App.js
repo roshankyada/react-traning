@@ -11,6 +11,7 @@ import Work from "./component/Work";
 import Cmp1 from './Component1/Cmp1';
 import Cmp2 from './Component1/Cmp2';
 import Cmp3 from './Component1/Cmp3';
+import Cmp4 from './Component1/Cmp4';
 function App() {
 
 
@@ -31,6 +32,7 @@ function App() {
       <Cmp1 />
       <Cmp2 />
       <Cmp3 />
+      <Cmp4 />
     </>
   );
 }

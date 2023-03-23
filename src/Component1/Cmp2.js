@@ -34,11 +34,12 @@ class Cmp2 extends Component {
     }
     render() {
         const { posts, error } = this.state
+
         return (
             <div className='List'>
                 {
-                    posts.length ?
-                        posts.map(post => <div key={post.id}>{post.id}{post.author}</div>) : null
+
+                    posts.map(post => <div key={post.id}>{post.id}{post.author}</div>)
                 }
                 {
                     error ? <div>{error}</div> : null
@@ -53,3 +54,36 @@ export default Cmp2
 
 
 
+// import React, { Component } from 'react'
+
+// class Cmp2 extends Component {
+
+//     state = {
+//         books: []
+//     }
+
+//     fetchBooks = () => {
+//         fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+//             .then((response) => response.json())
+//             .then(booksList => {
+//                 this.setState({ books: booksList });
+//             });
+//     }
+
+//     render() {
+//         return (
+//             <>
+//                 <button onClick={this.fetchBooks}>Load Books</button>
+//                 {(
+//                     <ul>
+//                         {this.state.books.map((book) => (
+//                             <li key={book.id}>{book.id}:- {book.title}</li>
+//                         ))}
+//                     </ul>
+//                 )}
+
+//             </>
+//         )
+//     }
+// }
+//export default Cmp2 
