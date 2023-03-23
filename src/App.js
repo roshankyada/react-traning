@@ -10,6 +10,7 @@ import DemoState from "./component/DemoState"
 import Work from "./component/Work";
 import Cmp1 from './Component1/Cmp1';
 import Cmp2 from './Component1/Cmp2';
+import Cmp3 from './Component1/Cmp3';
 function App() {
 
 
@@ -29,6 +30,7 @@ function App() {
       </DemoState>
       <Cmp1 />
       <Cmp2 />
+      <Cmp3 />
     </>
   );
 }
