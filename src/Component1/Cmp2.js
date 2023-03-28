@@ -25,7 +25,7 @@ class Cmp2 extends Component {
                 })
                 this.setState({ posts: updatePosts }) //response.data
                 console.log(response);
-                console.log(posts)
+
             })
             .catch(error => {
                 this.setState({ error: 'URl Error' })

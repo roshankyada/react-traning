@@ -1,8 +1,8 @@
 import React from 'react'
 import './mainComponent.css'
 import HOC from './HOC';
-import demoContext from './DemoContext';
-import { useContext } from 'react'
+//import demoContext from './DemoContext';
+//import { useContext } from 'react'
 function A(props) {
     const { count, increment, name } = props
     return (
