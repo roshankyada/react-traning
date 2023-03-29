@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Cmp1 = () => {
     const [posts, setPosts] = useState([]);
-    const apiEndPoint = "https://jsonplaceholder.typicode.com/posts";
+    const apiEndPoint = "https://jsonplaceholder.typicode.com/posts?_limit=10";
     useEffect(() => {
         const getPosts = async () => {
             const { data: res } = await axios.get(apiEndPoint);
@@ -29,7 +29,9 @@ const Cmp1 = () => {
         const index = postsClone.indexOf(post);
         postsClone[index] = { ...post };
         setPosts(postsClone);
-
+        // const article = { title: 'update title' }
+        // const res = await axios.put(apiEndPoint, article)
+        // setPosts();
 
     }
 
@@ -73,6 +75,7 @@ const Cmp1 = () => {
 
                                 </td>
                             </tr>
+
                         ))}
 
                     </tbody>

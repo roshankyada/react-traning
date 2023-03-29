@@ -13,6 +13,10 @@ import Cmp2 from './Component1/Cmp2';
 import Cmp3 from './Component1/Cmp3';
 import Cmp4 from './Component1/Cmp4';
 import ApiGet from './Component1/ApiGet';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Routes/Home';
+import About from './Routes/About';
+import Contact from './Routes/Contact';
 
 
 function App() {
@@ -22,6 +26,11 @@ function App() {
 
   return (
     <>
+      <Routes>
+        <Route path="/" element={<Home name='roshan' />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
       <DemoState>
 
 
@@ -32,11 +41,14 @@ function App() {
         <B />
         <Work />
       </DemoState>
+
       <Cmp1 />
       <Cmp2 />
       <Cmp3 />
       <Cmp4 />
       <ApiGet />
+
+
     </>
   );
 }
