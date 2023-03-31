@@ -27,9 +27,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home name='roshan' />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route exact path="/" element={<Home name='roshan' />} />
+        <Route exact path="/About" element={<About />} />
+        <Route exact path="/Contact" element={<Contact />} />
       </Routes>
       <DemoState>
 

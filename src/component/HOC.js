@@ -10,10 +10,13 @@ const HOC = (WrappedComponent, num) => {
                 setCount(prevcount => prevcount + num)
             }, [1000])
         }
+
         return (
-            <div>
-                <WrappedComponent count={count} increment={increment} {...props} />
-            </div>
+            <>
+                <div>
+                    <WrappedComponent count={count} increment={increment} {...props} />
+                </div>
+            </>
         );
     }
     return HOC

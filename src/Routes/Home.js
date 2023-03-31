@@ -1,11 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+
+// import { Link } from 'react-router-dom'
+import HOC from './HOC'
+import { useNavigate } from 'react-router-dom'
+
+function Home(props) {
+
+    const Navigate = useNavigate();
 
 
-export default function Home(props) {
     return (
+
         <div>
-            <header>
+            {/* <header>    
                 <nav>
                     <ul>
                         <li>
@@ -19,13 +25,16 @@ export default function Home(props) {
                         </li>
                     </ul>
                 </nav>
-            </header>
+            </header> */}
+            <HOC />
 
             <div>
                 <section>
-                    <h1>Home1 {props.name}</h1>
+                    <h1>Home1 </h1>
+                    <button onClick={() => { Navigate('/About') }}>GoTo/</button>
                 </section>
             </div>
         </div>
     )
 }
+export default Home

@@ -10,6 +10,8 @@ export default function ApiGet() {
 
     return (
 
-        <div>ApiGet</div>
+        <div>
+
+        </div>
     )
 }
