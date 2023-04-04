@@ -20,7 +20,7 @@ export default function HOC() {
                                     search: '?quick-submit=true',
 
                                 }}
-                                activeStyle={{ color: 'red', textDecoration: 'underline' }}
+
                             >
                                 About
                             </NavLink>
