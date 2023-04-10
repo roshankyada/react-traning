@@ -17,21 +17,36 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Routes/Home';
 import About from './Routes/About';
 import Contact from './Routes/Contact';
+import Childe from './Routes/Childe';
+import { User } from './Routes/User';
+
+
+
+
 
 
 function App() {
 
+  const users = [
+    { id: '1', fullName: 'Robin ' },
+    { id: '2', fullName: 'Sara' },
+  ];
 
 
 
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Home name='roshan' />} />
-        <Route exact path="/About/:id" element={<About />} />
-        <Route exact path="/Contact" element={<Contact />} />
-
+        <Route exact path="/" element={<Home name='roshan' />} >
+          <Route exact path="/About/:id" element={<About />} />
+          <Route exact path="/Contact" element={<Contact />} >
+            <Route exact path='/Contact/Childe' element={<Childe users={users} />} />
+            <Route path="/Contact/Childe/:userId" element={<User />} />
+            <Route exact path='/Contact/Admin' element={<User />} />
+          </Route>
+        </Route>
       </Routes>
+
       <DemoState>
 
 

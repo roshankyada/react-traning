@@ -27,12 +27,13 @@ function Home(props) {
                 </nav>
             </header> */}
             <HOC />
-            {Outlet}
+
             <div>
                 <section>
-                    <h1>Home1 </h1>
-                    <button onClick={() => { Navigate('/About') }}>GoTo/</button>
+
+                    <button onClick={() => { Navigate(-1) }}>GoTo Back</button>
                 </section>
+                <Outlet />
             </div>
         </div>
     )
