@@ -1,7 +1,7 @@
 
 // import { Link } from 'react-router-dom'
 import HOC from './HOC'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 function Home(props) {
 
@@ -27,7 +27,7 @@ function Home(props) {
                 </nav>
             </header> */}
             <HOC />
-
+            {Outlet}
             <div>
                 <section>
                     <h1>Home1 </h1>

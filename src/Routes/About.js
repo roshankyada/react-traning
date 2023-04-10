@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import HOC from './HOC'
 
 export default function About() {
-    const { id, name } = useParams();
-    console.log(id, name)
+    const { id } = useParams();
+    console.log(id)
 
     return (
         <div>
@@ -13,7 +13,7 @@ export default function About() {
             <HOC />
             <div>
                 <section>
-                    <h1>About1 - {id} - ({name})</h1>
+                    <h1>About1 - {id}</h1>
 
                 </section>
             </div>

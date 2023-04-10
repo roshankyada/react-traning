@@ -10,25 +10,20 @@ export default function HOC() {
                 <nav>
                     <ul>
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink exact to="/">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink
-                                to={{
-                                    pathname: "/About",
-                                    hash: '#submit',
-                                    search: '?quick-submit=true',
+                            <NavLink exact to={"/About"} > About</NavLink>
 
-                                }}
-
-                            >
-                                About
-                            </NavLink>
-                            {/* <Link to="/About">About</Link> */}
                         </li>
                         <li>
-                            <NavLink exact to="/Contact">Contact</NavLink>
-                            {/* <Link to="/Contact">Contact</Link> */}
+                            <NavLink to={{
+                                pathname: "/Contact",
+                                hash: 'start-position',
+                                search: '?quick-submit=true',
+
+                            }}>Contact</NavLink>
+
                         </li>
                     </ul>
                 </nav>
