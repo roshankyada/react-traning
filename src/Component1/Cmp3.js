@@ -33,6 +33,7 @@ class Cmp3 extends Component {
                 <label>Title</label>
                 <input
                     type="text"
+                    placeholder='type . . .'
                     value={this.state.title}
                     onChange={(event) => this.setState({ title: event.target.value })}
                 />

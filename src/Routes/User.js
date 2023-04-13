@@ -1,14 +1,20 @@
 import React from 'react'
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink, useParams, } from 'react-router-dom'
 
 export const User = () => {
-    const { userId } = useParams()
+    const { id } = useParams()
+
+
+
     return (
         <div>
             <section>
-                <p>User : {userId}</p>
-                <NavLink to="Childe">back to prev</NavLink>
+                <p>User : {id}</p>
+                <NavLink to="/Contact/Childe">back to prev</NavLink>
             </section>
+
+
         </div>
     )
 }
+

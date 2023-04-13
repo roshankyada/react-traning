@@ -19,6 +19,7 @@ import About from './Routes/About';
 import Contact from './Routes/Contact';
 import Childe from './Routes/Childe';
 import { User } from './Routes/User';
+import Form from './Component2 /Form'
 
 
 
@@ -32,25 +33,32 @@ function App() {
     { id: '2', fullName: 'Sara' },
   ];
 
+  // element={<Contact />}
 
 
   return (
     <>
+      <Header title="Header" serchBar={true} />
+
       <Routes>
+
         <Route exact path="/" element={<Home name='roshan' />} >
           <Route exact path="/About/:id" element={<About />} />
           <Route exact path="/Contact" element={<Contact />} >
             <Route exact path='/Contact/Childe' element={<Childe users={users} />} />
-            <Route path="/Contact/Childe/:userId" element={<User />} />
+            <Route path="/Contact/Childe/:id" element={<User />} />
             <Route exact path='/Contact/Admin' element={<User />} />
           </Route>
         </Route>
+        <Route path='*' element={'error'} />
+
       </Routes>
+      <Form />
 
       <DemoState>
 
 
-        <Header title="Header" serchBar={true} />
+
         <Child />
         <Footer />
         {/* <A /> */}
@@ -68,6 +76,7 @@ function App() {
     </>
   );
 }
+
 
 
 
