@@ -1,13 +1,12 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from "./component/Header";
-import Footer from "./component/Footer";
-import React from 'react'
-import Child from "./component/Child";
-//import A from "./component/A";
-import B from "./component/B";
-import DemoState from "./component/DemoState"
-import Work from "./component/Work";
+// import Footer from "./component/Footer";
+// import Child from "./component/Child";
+// //import A from "./component/A";
+// import B from "./component/B";
+// import DemoState from "./component/DemoState"
+// import Work from "./component/Work";
 import Cmp1 from './Component1/Cmp1';
 import Cmp2 from './Component1/Cmp2';
 import Cmp3 from './Component1/Cmp3';
@@ -20,6 +19,8 @@ import Contact from './Routes/Contact';
 import Childe from './Routes/Childe';
 import { User } from './Routes/User';
 import Form from './Component2 /Form'
+import Dropdown from './Component2 /Dropdown/Dropdown';
+//import Form1 from './Component2 /Form1';
 
 
 
@@ -54,17 +55,16 @@ function App() {
 
       </Routes>
       <Form />
+      {/* <Form1 /> */}
+      <Dropdown />
 
-      <DemoState>
-
-
-
+      {/* <DemoState>
         <Child />
         <Footer />
-        {/* <A /> */}
+        <A /> 
         <B />
         <Work />
-      </DemoState>
+      </DemoState> */}
 
       <Cmp1 />
       <Cmp2 />
