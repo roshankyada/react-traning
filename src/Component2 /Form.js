@@ -1,24 +1,26 @@
 import React, { useState } from 'react'
 import './Forms.css'
 
+
 export default function Form() {
 
     const [text, setText] = useState([{ name: '', salary: '' }])
 
     const handleAdd = () => {
         setText([...text, { name: '', salary: '' }])
+
     }
 
     const handleChange = (e) => {
-
-        console.log({ text })
+        setText((text) => ([...text, { name: e.target.value, salary: e.target.value }]))
 
     }
+
 
     const submit = (e) => {
 
         e.preventDefault();
-        console.log({ text })
+        console.log(text)
         alert('You have submitted the form.')
 
 
@@ -31,26 +33,29 @@ export default function Form() {
     }
 
 
+
     return (
         <div className='Form'>
+
             <div>
-                <div>
 
-                    <button onClick={handleAdd}>Add</button>
-                    {text.map((index, input) => {
-                        return (
-                            <div key={index.input} className="inputdata">
-                                <input className='FormInput' name='name' value={input.name} onChange={handleChange} />
-                                <input className='FormInput' name='salary' value={input.salary} onChange={handleChange} />
-                                <button type='submit' onClick={submit} >submit</button>
-                                <button type='remove' onClick={() => remove(index)}>Remove</button>
-                            </div>
-                        )
-                    })}
+                <button onClick={handleAdd}>Add</button>
+                {text.map((index, input) => {
+                    return (
+                        <div key={index.input} className="inputdata">
+                            <input className='FormInput' name='name' value={input.name} onChange={handleChange} />
+                            <input className='FormInput' name='salary' value={input.salary} onChange={handleChange} />
+                            <button type='submit' onClick={submit} >submit</button>
+                            <button type='remove' onClick={() => remove(input)}>Remove</button>
 
-                </div>
+                        </div>
+                    )
+                })}
 
             </div>
+
+
+
         </div>
     )
 }

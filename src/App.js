@@ -20,7 +20,7 @@ import Childe from './Routes/Childe';
 import { User } from './Routes/User';
 import Form from './Component2 /Form'
 import Dropdown from './Component2 /Dropdown/Dropdown';
-//import Form1 from './Component2 /Form1';
+import Form1 from './Component2 /Form1';
 
 
 
@@ -55,7 +55,7 @@ function App() {
 
       </Routes>
       <Form />
-      {/* <Form1 /> */}
+      <Form1 />
       <Dropdown />
 
       {/* <DemoState>
