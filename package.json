@@ -14,10 +14,13 @@
     "react-bootstrap": "^2.7.3",
     "react-config-form": "^0.0.0-development",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "react-switch": "^7.0.0",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
