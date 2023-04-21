@@ -9,7 +9,7 @@ const From1 = () => {
     const formData = { firstName: "", email: "", age: "", password: "", mobileNumber: '' }
     const [responseBody, setResponseBody] = useState(formData)
     const [error, setError] = useState(null)
-    const [validated, setValidated] = useState(false);
+    const [, setValidated] = useState(false);
     const [passError, setPassError] = useState(null)
 
     function inputChangeHandler(event) {
@@ -60,7 +60,13 @@ const From1 = () => {
 
                 <div><h4 htmlFor="firstName">Password</h4></div>
                 <div><input className='FormInput' id="password" name="password" placeholder='---pass---' value={responseBody.password} onChange={(e) => inputChangeHandler(e)} type="text" />
-                    {error && <p style={{ color: "red" }}>{passError}</p>}</div>
+                    {error && <p style={{ color: "red" }}>{passError}</p>}
+                    {/* {validated ? (
+                      <p>Password validated successfully!</p>
+                    ) : (
+                      <p>Password must be at least 8 characters long.</p>
+                    )} */}
+                </div>
 
 
                 <div><h4 htmlFor="firstName">Mobile-number</h4></div>

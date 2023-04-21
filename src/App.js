@@ -21,6 +21,8 @@ import { User } from './Routes/User';
 import Form from './Component2 /Form'
 import Dropdown from './Component2 /Dropdown/Dropdown';
 import Form1 from './Component2 /Form1';
+import Shop from './Redux/Shop';
+// import { Counter } from './Redux1/Counter';
 
 
 
@@ -54,6 +56,10 @@ function App() {
         <Route path='*' element={'error'} />
 
       </Routes>
+
+      {/* <Counter /> */}
+      <Shop />
+
       <Form />
       <Form1 />
       <Dropdown />
