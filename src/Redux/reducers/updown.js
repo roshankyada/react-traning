@@ -1,4 +1,4 @@
-const initialState = 0;
+const initialState = 0
 const changeTheNumber = (state = initialState, action) => {
     switch (action.type) {
         case "INCREMENT": return state + action.payload;
@@ -8,3 +8,5 @@ const changeTheNumber = (state = initialState, action) => {
 }
 
 export default changeTheNumber
+
+

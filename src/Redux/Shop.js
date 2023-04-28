@@ -8,7 +8,7 @@ import './Redux.css'
 const Shop = () => {
     const dispatch = useDispatch()
     const changeTheNumber = useSelector((State) => State.rootReducer.changeTheNumber);
-    console.log({ changeTheNumber })
+    // console.log({ changeTheNumber })
     return (
         <div className='shop'>
             <div >
